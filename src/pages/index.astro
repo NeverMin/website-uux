@@ -24,21 +24,19 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
+    callToAction={{ text: '解决方案', href: '#', icon: 'tabler:book' }}
+    callToAction2={{ text: '了解更多', href: '#features', icon: 'tabler:chevron-down' }}
     image={{ src: import('~/assets/images/drone.jpg'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS    </Fragment>
+      从<span class="hidden xl:inline">另外一个高度</span>
+      <span class="text-accent dark:text-white highlight">看</span>世界</Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
+        <span class="font-semibold">UUX Group</span> 位于中国创新之都深圳，我们是一家专注于无人机产品的提供商。</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">我们致力于为商业、农业、旅游等领域提供高品质的无人机解决方案。</span>无人机技术的快速发展正在改变着各个行业，而我们的产品正是应对这一变革的理想选择。我们的无人机产品结合了创新设计和先进技术，为您的业务带来无限可能。
     </Fragment>
   </Hero>
 
@@ -49,48 +47,48 @@ const meta = {
   <!-- Features Widget *************** -->
 
   <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    highlight="应用领域"
+    title="从另外一个高度看世界，引领无人机技术的创新与发展，创造更美好的未来。"
+    subtitle="通过我们对创新、质量和客户关系的坚持，我们将不断超越界限，从另外一个高度看世界。我们的愿景是成为全球无人机技术的引领者，为客户和社会创造更大的价值和影响力。"
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: '航拍摄影和影视制作',
           description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
+            '无人机提供了独特的航拍视角，用于电影、电视剧、广告和纪录片等影视制作项目。无人机能够捕捉到惊人的航拍画面，为影片增添戏剧性和震撼性。',
+          icon: 'tabler:plane',
         },
         {
-          title: 'Ready-to-use Components',
+          title: '农业监测和精准农业',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+            '无人机可以用于农业领域的监测和管理。它们可以提供高分辨率的图像和数据，帮助农民监测农作物的健康状况、土壤质量和水源分布，从而实现更精确的农业操作和资源管理。',
           icon: 'tabler:components',
         },
         {
-          title: 'Best Practices',
+          title: '物流和快递',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:list-check',
+            '无人机可以用于物流和快递服务，实现快速、高效的货物运输。无人机能够穿越交通拥堵或地形复杂的区域，将货物快速送达目的地，提高物流效率和快递服务的速度。',
+          icon: 'tabler:tir',
         },
       ],
       [
         {
-          title: 'Excellent Page Speed',
+          title: '安全监控和边境巡逻',
           description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-          icon: 'tabler:rocket',
+            '无人机在安全监控和边境巡逻方面发挥着重要作用。它们可以在无人机上安装高清摄像头和热成像设备，用于监控和巡逻关键区域，提供实时视频和图像，帮助提升安全性和边境防护。',
+          icon: 'tabler:shield',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: '灾害响应和救援',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:arrows-right-left',
+            '无人机可在自然灾害或紧急情况下用于救援和灾害响应。它们可以提供空中监视、搜索和救援任务，快速定位受困人员、评估灾情，并为救援人员提供实时的情报和支持。',
+          icon: 'tabler:lifebuoy',
         },
         {
-          title: 'Open to new ideas and contributions',
+          title: '科学研究和环境监测',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:bulb',
+            '无人机在科学研究和环境监测领域发挥着重要作用。它们可以携带各种传感器和设备，用于监测大气、水质、植被、野生动物等环境因素，为科学家提供准确的数据和研究资料。',
+          icon: 'tabler:flask',
         },
       ],
     ]}
@@ -334,18 +332,17 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: '联系我们',
+      href: '#',
+      icon: 'tabler:phone',
     }}
   >
     <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      UUX<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Group</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      探索 UUX Group 的无人机产品，开启创新的飞行之旅！<br class="hidden md:inline" />联系我们，了解更多关于我们的产品和服务，我们期待与您的合作。
     </Fragment>
   </CallToAction>
 </Layout>

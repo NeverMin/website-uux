@@ -3,24 +3,11 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
-        },
-      ],
+      text: '首页',
+      href: getPermalink('/'),
     },
     {
-      text: 'Pages',
+      text: '产品与服务',
       links: [
         {
           text: 'Features',
@@ -49,15 +36,15 @@ export const headerData = {
       ],
     },
     {
-      text: 'Widgets',
-      href: '#',
-    },
-    {
-      text: 'Blog',
+      text: '博客',
       href: getBlogPermalink(),
     },
+    {
+      text: '联系我们',
+      href: '#',
+    },
   ],
-  actions: [{ type: 'button', text: 'Download', href: '#' }],
+  actions: [{ type: 'button', text: '在线购买', href: '#' }],
 };
 
 export const footerData = {
@@ -120,6 +107,6 @@ export const footerData = {
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.uuxgroup.com/"> 深圳市宜安特</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.uuxgroup.com/"> UUX Group</a> · All rights reserved.
   `,
 };
