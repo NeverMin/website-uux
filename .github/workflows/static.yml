@@ -22,7 +22,9 @@ jobs:
         run: npm install
 
       - name: Build AstroWind
-        run: npm run build
+        run: |
+          npm run build
+          echo 'www.uuxgroup.com' > ./dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
