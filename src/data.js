@@ -1,13 +1,14 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+const year = new Date().getFullYear();
 
 export const headerData = {
   links: [
     {
-      text: '首页',
+      text: 'Home',
       href: getPermalink('/'),
     },
     {
-      text: '产品与服务',
+      text: 'Product',
       links: [
         {
           text: 'Features',
@@ -36,15 +37,15 @@ export const headerData = {
       ],
     },
     {
-      text: '博客',
+      text: 'News',
       href: getBlogPermalink(),
     },
     {
-      text: '联系我们',
-      href: '#',
+      text: 'Contact',
+      href: '/Contact',
     },
   ],
-  actions: [{ type: 'button', text: '在线购买', href: '#' }],
+  actions: [{ type: 'button', text: 'How to buy', href: '#' }],
 };
 
 export const footerData = {
@@ -62,13 +63,13 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
+      title: 'Developer',
       links: [
         { text: 'Developer API', href: '#' },
         { text: 'Partners', href: '#' },
         { text: 'Atom', href: '#' },
         { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Desktop', href: '#' },
       ],
     },
     {
@@ -106,7 +107,7 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.uuxgroup.com/"> UUX Group</a> · All rights reserved.
+    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(/favicon.ico)]"></span>
+    &copy; ${year} <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://www.uuxgroup.com/"> UUX Group</a> · All rights reserved.
   `,
 };
