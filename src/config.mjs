@@ -9,7 +9,7 @@ const CONFIG = {
 
   title: 'UUX Group',
   description:
-    '🚀 UUX 无人机, 在另外一个高度看世界.',
+    '🚀 UUX, fly your dream.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
