@@ -19,10 +19,6 @@ export const headerData = {
           href: '#',
         },
         {
-          text: 'About us',
-          href: '#',
-        },
-        {
           text: 'Contact',
           href: 'contact',
         },
@@ -39,6 +35,10 @@ export const headerData = {
     {
       text: 'News',
       href: getNewsPermalink(),
+    },
+    {
+      text: 'About us',
+      href: 'about',
     },
     {
       text: 'Contact',
