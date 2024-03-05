@@ -1,8 +1,8 @@
 ---
-import Grid from '~/components/blog/Grid.astro';
+import Grid from '~/components/news/Grid.astro';
 
-import { getBlogPermalink } from '~/utils/permalinks';
-import { findPostsByIds } from '~/utils/blog';
+import { getNewsPermalink } from '~/utils/permalinks';
+import { findPostsByIds } from '~/utils/news';
 
 export interface Props {
   title?: string;
@@ -15,7 +15,7 @@ export interface Props {
 const {
   title = await Astro.slots.render('title'),
   allPostsText = 'View all posts',
-  allPostsLink = getBlogPermalink(),
+  allPostsLink = getNewsPermalink(),
   information = await Astro.slots.render('information'),
   postIds = [],
 } = Astro.props;

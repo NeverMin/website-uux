@@ -1,16 +1,16 @@
 ---
-import { SITE, BLOG } from '~/config.mjs';
+import { SITE, NEWS } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Pagination from '~/components/blog/Pagination.astro';
+import NewsList from '~/components/news/List.astro';
+import Pagination from '~/components/news/Pagination.astro';
 
-import { fetchPosts } from '~/utils/blog';
+import { fetchPosts } from '~/utils/news';
 import { TAG_BASE } from '~/utils/permalinks';
-import Headline from '~/components/blog/Headline.astro';
+import Headline from '~/components/news/Headline.astro';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.tag?.disabled) return [];
+  if (NEWS?.disabled || NEWS?.tag?.disabled) return [];
 
   const posts = await fetchPosts();
   const tags = new Set();
@@ -22,8 +22,8 @@ export async function getStaticPaths({ paginate }) {
     paginate(
       posts.filter((post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.toLowerCase() === tag)),
       {
-        params: { tag: tag, blog: TAG_BASE || undefined },
-        pageSize: BLOG.postsPerPage,
+        params: { tag: tag, news: TAG_BASE || undefined },
+        pageSize: NEWS.postsPerPage,
         props: { tag },
       }
     )
@@ -36,14 +36,14 @@ const currentPage = page.currentPage ?? 1;
 const meta = {
   title: `Posts by tag '${tag}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
   description: SITE.description,
-  noindex: BLOG?.tag?.noindex,
+  noindex: NEWS?.tag?.noindex,
 };
 ---
 
 <Layout meta={meta}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline>Tag: {tag}</Headline>
-    <BlogList posts={page.data} />
+    <NewsList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>

@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getNewsPermalink, getAsset } from './utils/permalinks';
 const year = new Date().getFullYear();
 
 export const headerData = {
@@ -12,7 +12,7 @@ export const headerData = {
       links: [
         {
           text: 'Features',
-          href: getPermalink('/#features'),
+          href: getPermalink('/features'),
         },
         {
           text: 'Pricing',
@@ -24,7 +24,7 @@ export const headerData = {
         },
         {
           text: 'Contact',
-          href: '#',
+          href: 'contact',
         },
         {
           text: 'Terms',
@@ -38,11 +38,11 @@ export const headerData = {
     },
     {
       text: 'News',
-      href: getBlogPermalink(),
+      href: getNewsPermalink(),
     },
     {
       text: 'Contact',
-      href: '/Contact',
+      href: '/contact',
     },
   ],
   actions: [{ type: 'button', text: 'How to buy', href: '#' }],
@@ -86,7 +86,7 @@ export const footerData = {
       title: 'Company',
       links: [
         { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
+        { text: 'News', href: '#' },
         { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
         { text: 'Inclusion', href: '#' },

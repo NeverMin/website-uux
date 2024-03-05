@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
-import PostTags from '~/components/blog/Tags.astro';
+import PostTags from '~/components/news/Tags.astro';
 
-import { BLOG } from '~/config.mjs';
+import { NEWS } from '~/config.mjs';
 import type { Post } from '~/types';
 
 import { getPermalink } from '~/utils/permalinks';
@@ -17,7 +17,7 @@ export interface Props {
 const { post } = Astro.props;
 const image = await findImage(post.image);
 
-const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
+const link = !NEWS?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
 ---
 
 <article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
